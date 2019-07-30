@@ -1,0 +1,21 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+apply plugin: 'kotlin'
+
+dependencies {
+    implementation gradleApi()
+//    implementation localGroovy()
+//    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'com.android.tools.build:gradle:3.4.2'
+}
+
+group='com.noober.asmplugin'
+version='1.0.0'
+
+uploadArchives{
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../publish'))
+        }
+    }
+}
