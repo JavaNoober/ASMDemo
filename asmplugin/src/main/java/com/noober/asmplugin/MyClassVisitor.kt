@@ -30,7 +30,7 @@ class MyClassVisitor(cv: ClassVisitor) : ClassVisitor(Opcodes.ASM4, cv), Opcodes
     ): MethodVisitor {
         val methodVisitor = cv.visitMethod(access, name, desc, signature, exceptions)
         println("visitMethod:$name")
-        if(name == "onCreate3"){
+        if(name == "onCreate2"){
             return MyMethodVisitor(methodVisitor)
         }
         return methodVisitor//不能直接return super，否则会导致代码重复生成

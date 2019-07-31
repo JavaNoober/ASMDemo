@@ -12,10 +12,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 //        Toast.makeText(this, "toast", Toast.LENGTH_LONG).show()
         val context = this
-//        Test1().onCreate2(this)
-    }
-
-    public fun onCreate2(){
-
+        Test1().onCreate2(this)
     }
 }
